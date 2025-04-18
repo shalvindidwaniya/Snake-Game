@@ -7,7 +7,7 @@ let moveSound = new Audio("Music/move.mp3");
 let musicSound = new Audio("Music/music.mp3");
 let scoreBoard = document.querySelector(".score");
 let highBoard = document.querySelector(".highScore");
-let speed = 4;
+let speed = 5;
 let score = 0;
 let highScore = 0;
 let lastPaintTime = 0;
@@ -108,8 +108,8 @@ function gameEngine() {
 
 //main logic starts here
 window.requestAnimationFrame(main);
+inputDir = { x: 0, y: 0 }; //game start
 window.addEventListener("keydown", (e) => {
-  inputDir = { x: 0, y: 0 }; //game start
   moveSound.play();
   switch (e.key) {
     case "ArrowUp":
